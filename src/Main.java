@@ -46,12 +46,13 @@ public class Main {
                 br.embaralhar();
                 Carta carta = br.cartas.get(0);
                 System.out.println("Valor retirado: "+carta.getValorCarta());
+                valorFinal = valorFinal + carta.getValorCarta();
+                System.out.println("Valor total: " + valorFinal);
                 System.out.println("Deseja continuar? (S/N)");
                 continuarJogo = leitor.next();
                 if(continuarJogo.equalsIgnoreCase("N")){
                     validacao = false;
                 }
-                valorFinal = valorFinal + carta.getValorCarta();
             }
             if(valorFinal == 21){
                 System.out.println("Você retirou o valor: " + valorFinal + " e ganhou o jogo!");
